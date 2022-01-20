@@ -1,0 +1,16 @@
+@import "variables";
+@import "padre";
+@import "productos";
+@import "ropa";
+@import "contacto";
+@import "responsibe";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body{
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #f47b7b 74%);    
+}

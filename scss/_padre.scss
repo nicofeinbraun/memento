@@ -1,0 +1,69 @@
+@import "variables";
+
+.padre{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: (repeat(4,auto));
+    grid-template-areas:
+    "logo logo logo logo "
+    "portada portada portada portada"
+    "nosotros nosotros nosotros contenido"
+    "footer footer footer footer";
+    @include estilo();
+    .logo{
+        grid-area: logo;
+        nav{
+            ul{ 
+                li{
+                    a{
+                        &:hover{
+                            color: #444;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .portada{
+        grid-area: portada;
+    }
+    .contenido{
+        grid-area: contenido;
+        .produ, .descripcion{
+            width: 350px;
+            padding-right: 100px;
+            
+            .accesorios,.zapatos{
+                @extend .produ;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;    
+                justify-content: space-evenly;
+            }
+        }
+    }
+    .nosotros{
+        grid-area: nosotros;
+        p{
+            max-width: 90%;
+            padding: 10px;
+            border: 4px;
+            line-height: 1.5;
+            font-size: $l;
+        }
+    }
+    
+    
+    .wtt{ 
+        position: fixed;
+            bottom: 20px;
+            right: 20px;
+    }
+    .footer{
+        grid-area: footer;
+    }
+
+
+}
